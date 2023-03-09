@@ -9,18 +9,23 @@ namespace labNetPractica1
     public class Omnibus : TransportePublico
     {
 
-        public Omnibus(int pasajeros) : base(pasajeros)
+        public Omnibus(int pasajeros, string nombreVehiculo) : base(pasajeros, nombreVehiculo)
         {
         }
 
         public override string Avanzar()
         {
-            return $"Avanzando con {pasajeros} pasajeros";
+            return $"Soy un Omnibus y avanzo con {pasajeros} pasajeros";
         }
 
         public override string Detenerse()
         {
-            return $"Deteniendome con {pasajeros} pasajeros";
+            return $"Soy un Omnibus y me detengo con {pasajeros} pasajeros";
+        }
+
+        public override string Listarvehivulos()
+        {
+            return $"{nombreVehiculo}: {pasajeros}";
         }
 
     }

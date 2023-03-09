@@ -9,20 +9,19 @@ namespace labNetPractica1
     public abstract class TransportePublico
     {
         public int pasajeros;
+        public string nombreVehiculo;
 
-        public TransportePublico(int pasajeros)
+        public TransportePublico(int pasajeros, string nombreVehiculo)
         {
             this.pasajeros = pasajeros;
+            this.nombreVehiculo = nombreVehiculo;
         }
 
         public abstract string Avanzar();
 
         public abstract string Detenerse();
 
-        public void imprimirPasajeros()
-        {
-
-        }
+        public abstract string Listarvehivulos();
 
     }
 }
