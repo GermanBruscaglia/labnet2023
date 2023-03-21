@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>LabNetPractica5</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container-title" id="title-game">
+            <h1 class="title-game" >ADIVINA EL NUMERO</h1>
+        </div>
+    </div>
+
+    <main class="main">
+        <h2>Solo números entre 1 y 20</h2>
+
+        <p class="intentos">Intentos Restantes: <span id="intentos-restantes">10</span></p>
+
+        <form id="form-numero" class="form-numero">
+            <input type="number" max="20" min="1" name="nameNumero" id="numero-jugador" class="input-number" required>
+            <input type="submit" value="Probar" id="btn-play" class="btn-submit">
+        </form>
+
+        <span id="diferencia" class="diferencia visibility-hidden"></span>
+    </main>
+
+    <section class="mejores-puntajes">
+        <p>Mejor Puntuación:</p>
+        <p><span id="puntajeLS"></span> intentos de sobra</p>
+    </section>
+
+    <div class="container-winner">
+        <div class="winner">
+            <div class="content-winner">
+                <h2 class="title-winner">¡¡ GANASTE !!</h2>
+                <p>Tu puntaje es: <span id="puntaje"></span></p>
+                <button id="btn-replay-winner" class="btn-replay-winner">Volver a jugar</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container-loser">
+        <div class="loser">
+            <div class="content-loser">
+                <h2 class="title-loser">¡¡ PERDISTE !!</h2>
+                <p>Te quedaste sin intentos</p>
+                <button id="btn-replay-loser" class="btn-replay-loser">Volver a jugar</button>
+            </div>
+            
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

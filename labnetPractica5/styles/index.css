@@ -1,0 +1,217 @@
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-color: black;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.container-title{
+    background-color: green;
+    border-radius: 25px;
+    border: solid black thin;
+    padding: 1rem;
+    box-shadow: 5px 5px gray;
+}
+.title-game{
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+.main{
+    background-color: rgb(158, 157, 157);
+    height: auto;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    border: solid thick orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+.form-numero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn-submit{
+    background-color: white;
+    color: green;
+    border: none;
+    padding: .5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all ease .3s;
+    margin-top: 1rem;
+}
+.input-number{
+    width: 100px;
+    height: 25px;
+}
+.mejores-puntajes{
+    background-color: rgb(228, 228, 228);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    text-align: center;
+    border: solid thick green;
+    margin-top: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.diferencia{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: .5rem;
+    margin: 1rem;
+}
+.intentos{
+    background-color: green;
+    padding: .5rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.container-winner{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -200%;
+    transition: margin-left ease 0.4s;
+}
+.winner{
+    background-color: green;
+    width: 80%;
+    height: 80vh;
+    border-radius: 2rem;
+    border: solid medium white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.content-winner{
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    height: 75%;
+}
+.content-winner h2{
+    font-size: 4rem;
+}
+.btn-replay-winner{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    background-color: white;
+    color: green;
+    border: none;
+    padding: .5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.btn-replay-winner:hover, .btn-submit:hover{
+    background-color: rgb(0, 255, 0);
+    color: white;
+}
+
+.container-loser{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -200%;
+    transition: margin-left ease 0.4s;
+}
+.loser{
+    background-color: red;
+    width: 80%;
+    height: 80vh;
+    border-radius: 2rem;
+    border: solid medium white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.content-loser{
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    height: 75%;
+}
+.content-loser h2{
+    font-size: 4rem;
+}
+.btn-replay-loser{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    background-color: white;
+    color: red;
+    border: none;
+    padding: .5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+.btn-replay-loser:hover{
+    background-color: rgb(250, 128, 128);
+    color: white;
+}
+
+/*utilidades*/
+.visibility-hidden{
+    visibility: hidden;
+}
+.visibility-visible{
+    visibility: visible;
+}
+.margin-left-0 {
+    margin-left: 0;
+}
+.bg-red{
+    background-color: red;
+}
