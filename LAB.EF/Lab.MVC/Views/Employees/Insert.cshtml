@@ -1,0 +1,23 @@
+﻿@model Lab.MVC.Models.EmployeesView
+
+@{
+    ViewBag.Title = "Insertar Empleados";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h1>Vista insertar Empleados</h1>
+
+    @using (Html.BeginForm("Insert", "Employees", FormMethod.Post))
+    {
+        <label>Nombre: </label> @Html.TextBoxFor(e => e.Nombre)
+        <input type="submit" value="Guardar" class="btn btn-success">
+    }
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿@model List<Lab.WebApi.Models.CategoriesView>
+@{
+    ViewBag.Title = "Lista de Categorías";
+}
+
+<h1>Lista de Categorías</h1>
+
+<table class="table table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Eliminar</th>
+    </tr>
+    @foreach (var categorie in Model)
+    {
+        <tr>
+            <td>@categorie.Id</td>
+            <td>@categorie.Nombre</td>
+            <td>@Html.ActionLink("Eliminar", "Delete", new { id = categorie.Id })</td>
+        </tr>
+    }
+</table>
+
+<div class="btn btn-light text-decoration-none " >
+    @Html.ActionLink("Insertar categorias", "Insert", "Categories")
+</div>
+

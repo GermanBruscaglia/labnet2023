@@ -1,0 +1,34 @@
+﻿@model List<Lab.MVC.Models.EmployeesView> 
+@{ 
+    ViewBag.Title = "Empleados";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h1>Empleados</h1>
+    
+    <table>
+        <tr>
+            <td>Nombre Empleado</td>
+            <td>Id</td>
+        </tr>
+
+        @foreach(var employee in Model)
+            {
+                <tr>
+                    <td>@employee.Nombre</td>
+                    <td>@employee.Id</td>
+                </tr>
+            }
+    </table>
+    <div>
+        @Html.ActionLink("Insertar nuevo Empleado", "Insert", "Employees")
+    </div>
+</body>
+</html>

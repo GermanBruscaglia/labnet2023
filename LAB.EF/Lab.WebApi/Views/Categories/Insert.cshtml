@@ -1,0 +1,23 @@
+﻿@model Lab.WebApi.Models.CategoriesView
+
+@{
+    ViewBag.Title = "Insertar Categoria";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Insert</title>
+</head>
+<body>
+    <h1>Insertar Categoría</h1>
+
+    @using (Html.BeginForm("Insert", "Categories", FormMethod.Post))
+    {
+        <label>Nombre: </label> @Html.TextBoxFor(e => e.Nombre)
+        <input type="submit" value="Guardar" class="btn btn-success">
+    }
+</body>
+</html>
